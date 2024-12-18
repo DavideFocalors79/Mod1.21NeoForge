@@ -27,6 +27,11 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(2f)));
 
 
+    public static final DeferredBlock<Block> DEEPSLATE_SILICA_CLUSTER = registerBlock("deepslate_silica_cluster",
+            () -> new DropExperienceBlock(UniformInt.of(3, 7),
+                    BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).strength(2f)));
+
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "itismod:silica_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequences": "itismod:blocks/silica_block"
+}

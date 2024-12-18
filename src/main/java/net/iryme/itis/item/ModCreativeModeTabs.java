@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                       output.accept(ModItems.SILICADUST);
 
                       output.accept(ModBlocks.SILICA_BLOCK);
+                      output.accept(ModBlocks.DEEPSLATE_SILICA_CLUSTER);
                       output.accept(ModBlocks.SILICA_CLUSTER);
                     }).build());
 
