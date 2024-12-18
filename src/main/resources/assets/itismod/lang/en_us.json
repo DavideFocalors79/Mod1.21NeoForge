@@ -4,5 +4,7 @@
   "item.itismod.silicadust": "Silica Dust",
 
   "block.itismod.silica_block": "Silica Block",
-  "block.itismod.silica_cluster": "Silica Cluster"
+  "block.itismod.silica_cluster": "Silica Cluster",
+
+  "creativetab.itismod.itis_mod_tab": "Itis Mod"
 }

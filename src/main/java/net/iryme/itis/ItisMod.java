@@ -1,6 +1,7 @@
 package net.iryme.itis;
 
 import net.iryme.itis.block.ModBlocks;
+import net.iryme.itis.item.ModCreativeModeTabs;
 import net.iryme.itis.item.ModItems;
 import org.slf4j.Logger;
 
@@ -58,6 +59,8 @@ public class ItisMod
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         // Register the item to a creative tab
@@ -75,15 +78,6 @@ public class ItisMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.CHOICEBOOK);
-            event.accept(ModItems.SILICADUST);
-        }
-
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.SILICA_BLOCK);
-            event.accept(ModBlocks.SILICA_CLUSTER);
-        }
 
     }
 
