@@ -2,9 +2,11 @@ package net.iryme.itis.block;
 
 import net.iryme.itis.ItisMod;
 import net.iryme.itis.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -18,11 +20,11 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SILICA_BLOCK = registerBlock("silica_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.SAND)));
+                    .strength(1f).requiresCorrectToolForDrops().sound(SoundType.SAND)));
 
     public static final DeferredBlock<Block> SILICA_CLUSTER = registerBlock("silica_cluster",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(6f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+            () -> new DropExperienceBlock(UniformInt.of(3, 4),
+                    BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(2f)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

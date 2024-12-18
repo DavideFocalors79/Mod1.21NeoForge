@@ -10,7 +10,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ItisMod.MODID);
 
     public static final DeferredItem<Item> CHOICEBOOK = ITEMS.register("choicebook",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> SILICADUST = ITEMS.register("silicadust",
             () -> new Item(new Item.Properties()));
 
