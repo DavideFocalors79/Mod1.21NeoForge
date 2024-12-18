@@ -80,6 +80,11 @@ public class ItisMod
             event.accept(ModItems.SILICADUST);
         }
 
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.SILICA_BLOCK);
+            event.accept(ModBlocks.SILICA_CLUSTER);
+        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
