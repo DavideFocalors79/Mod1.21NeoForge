@@ -1,6 +1,7 @@
 package net.iryme.itis.block;
 
 import net.iryme.itis.ItisMod;
+import net.iryme.itis.block.custom.FedericoBlock;
 import net.iryme.itis.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -30,6 +31,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DEEPSLATE_SILICA_CLUSTER = registerBlock("deepslate_silica_cluster",
             () -> new DropExperienceBlock(UniformInt.of(3, 7),
                     BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).strength(2f)));
+
+    public static final DeferredBlock<Block> FEDERICO_BLOCK = registerBlock("federico_block",
+            () -> new FedericoBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

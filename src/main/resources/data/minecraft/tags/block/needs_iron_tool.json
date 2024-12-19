@@ -3,6 +3,7 @@
   "values": [
     "itismod:silica_cluster",
     "itismod:deepslate_silica_cluster",
-    "itismod:silica_block"
+    "itismod:silica_block",
+    "itismod:federico_block"
   ]
 }
